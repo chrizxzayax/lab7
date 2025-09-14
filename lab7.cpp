@@ -18,3 +18,22 @@ void displayArray(string* arrrr, int sz) {
     }
     cout << endl;
 }
+
+int main() {
+
+    const int sz = 5;
+    string* names = new string[sz];
+
+    *(names + 0) = "Janet";
+    *(names + 1) = "Jeffe";
+    *(names + 2) = "Jin";
+    *(names + 3) = "Joe";
+    *(names + 4) = "Junio";
+
+    cout << "Original array: ";
+    displayArray(names, sz);
+    
+    delete[] names;
+
+    return 0;
+}
