@@ -3,17 +3,18 @@
 
 using namespace std;
 
-string* reverseArray(string* arr, int size) {
-    string* reversedArr = new string[size];
-    for (int i = 0; i < size; i++) {
-        reversedArr[i] = arr[size - 1 - i];
+string* reverseArray(string* arrrr, int sz) {
+    for (int i = 0; i < sz / 2; i++){
+        string temp = *(arrrr + i);
+        *(arrrr + i) = *(arrrr + sz - 1 - i);
+        *(arrrr + sz - 1 - i) = temp;
     }
-    return reversedArr;
+    return arrrr;
 }
 
-void displayArray(string* arr, int size) {
-    cout << "Array contents:\n";
-    for (int i = 0; i < size; i++) {
-        cout << arr[i] << "\n";
+void displayArray(string* arrrr, int sz) {
+    for (int i = 0; i < sz; i++) {
+        cout << *(arrrr + i) << " ";
     }
+    cout << endl;
 }
