@@ -32,6 +32,10 @@ int main() {
 
     cout << "Original array: ";
     displayArray(names, sz);
+
+    reverseArray(names, sz);
+    cout << "Reversed array: ";
+    displayArray(names, sz);
     
     delete[] names;
 
